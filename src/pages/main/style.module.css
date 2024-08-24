@@ -16,3 +16,62 @@
     margin: 20px;
     margin-left: 19px;
 }
+
+.main_header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navfoodbar {
+    display: flex;
+    padding: 10px;
+    overflow-x: scroll;
+    -ms-overflow-style: none;
+    /* 인터넷 익스플로러 */
+    scrollbar-width: none;
+    /* 파이어폭스 */
+    user-select: none;
+}
+
+.navfoodbar::-webkit-scrollbar {
+    display: none;
+}
+
+.navfoodbar>div>.profile_unselect {
+    width: 60px;
+    height: 60px;
+    margin-left: 10px;
+    margin-right: 10px;
+    border-radius: 100%;
+    display: flex;
+    padding: 10px;
+    background-color: #F0F0F0;
+}
+
+.navfoodbar>div>.profile_select {
+    width: 60px;
+    height: 60px;
+    margin-left: 10px;
+    margin-right: 10px;
+    border-radius: 100%;
+    display: flex;
+    padding: 10px;
+    background-color: #151719;
+}
+
+.navfoodbar>div>.profile_select_p {
+    text-align: center;
+    color: #151719;
+    font-weight: 10;
+    font-size: 0.9em;
+    margin-top: 5px
+}
+
+.navfoodbar>div>.profile_unselect_p {
+    text-align: center;
+    color: #C5C5C5;
+    font-weight: 10;
+    font-size: 0.9em;
+    margin-top: 5px
+}
