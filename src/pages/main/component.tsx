@@ -3,6 +3,8 @@ import { CiLocationOn } from "react-icons/ci";
 import { LuSearch, LuBadgePercent, LuShoppingCart, LuSlidersHorizontal } from "react-icons/lu";
 import { useNavigate, useSearchParams } from "react-router-dom";
 import { useEffect, useState } from "react";
+import { FaStar } from "react-icons/fa6";
+import { BiMessageSquareDots } from "react-icons/bi";
 
 export const MainHeader = () => {
     return (
@@ -113,13 +115,15 @@ export const NavFoodBar = () => {
 export const GourmentRecommended = () => {
     const data = [
         {
-            name: "Hot Crispy Burger",
+            name: "Hot Crispy\nBurger",
+            url: "/item/burger.png",
             price: "6.11",
             star: "4.2",
             star_count: "157"
         },
         {
-            name: "Hot Crispy Burger",
+            name: "Banana\nPongcrush",
+            url: "/item/drink.png",
             price: "6.11",
             star: "4.2",
             star_count: "157"
@@ -127,15 +131,83 @@ export const GourmentRecommended = () => {
     ];
 
     return (
-        <div style={{ padding: "15px", marginTop: "20px", display: "flex", flexDirection: "column" }}>
-            <header style={{ display: "flex", alignItems: "center", width: "100%", fontSize: "0.9em" }}>
-                <h3 style={{ marginRight: "auto" }}>Gourment Recommended</h3>
+        <div className={style.gr_container}>
+            <header>
+                <h2 style={{ marginRight: "auto" }}>Gourmet Recommended</h2>
                 <span style={{ color: "#AAAAAA" }}>더보기</span>
             </header>
-            <div style={{ display: "flex", overflowX: "scroll", width: "100%", whiteSpace: "nowrap" }}>
-                {Array(8).fill(null).map((_, index) => (
-                    <div key={index} style={{ backgroundColor: "#151719", width: "150px", height: "150px", display: "inline-block", marginRight: "10px" }} />
-                ))}
+            <div className={style.gr_boxes}>
+                {
+                    data.map((item, i) => {
+                        return (
+                            <div className={style.box} key={i}>
+                                <div
+                                    className={style.background}
+                                    style={{ backgroundImage: `url('${item.url}')` }}
+                                ></div>
+                                <div className={style.content}>
+                                    <h1 style={{ whiteSpace: "pre-line" }}>{item.name}</h1>
+                                </div>
+                                <div className={style.content}>
+                                    <h2 style={{ whiteSpace: "pre-line" }}>$ {item.price}</h2>
+                                </div>
+                                <div className={style.content}>
+                                    <span style={{ whiteSpace: "pre-line" }}><span style={{ color: "yellow" }}><FaStar /></span> {item.star} ({item.star_count})</span>
+                                </div>
+                                <div style={{ display: "flex" }}>
+                                    <div className={style.content_bottom}>
+                                        Add to Cart
+                                    </div>
+                                    <div className={style.content_bottom_1}>
+                                        <h2 style={{ display: "flex", alignItems: "center", justifyContent: "center" }}><BiMessageSquareDots /></h2>
+                                    </div>
+                                    <div className={style.content_bottom_1}>
+                                        <h2 style={{ display: "flex", alignItems: "center", justifyContent: "center" }}><BiMessageSquareDots /></h2>
+                                    </div>
+                                </div>
+
+                            </div>
+                        )
+                    })
+                }
+            </div>
+        </div>
+    );
+};
+
+export const Restaurants = () => {
+    const data = ["Recently Order", "Most Popular", "Closest", "On Sale"];
+    const [id, SetID] = useState(0);
+
+    return (
+        <div className={style.r_container}>
+            <header>
+                <h2 style={{ marginRight: "auto" }}>Restaurants</h2>
+            </header>
+            <div style={{ display: "flex", overflowX: "scroll", marginTop: "10px" }}>
+                {
+                    data.map((item, i) => {
+                        return (
+                            <div className={id === i ? style.div_select : style.div_unselect} key={i} onClick={() => SetID(i)}>{item}</div>
+                        )
+                    })
+                }
+            </div>
+            <div style={{ display: "flex", flexDirection: "column", }}>
+                <div style={{ display: "flex", alignItems: "center", marginTop: "20px", flexDirection: "column" }}>
+                    <img src="/item/Restraunt.png" style={{ width: "90%" }} />
+                    <div style={{ backgroundColor: "#151719", width: "100%", padding: "10px", color: "white", borderRadius: "0.5em", display: "flex", flexDirection: "column" }}>
+                        <h3>해우리 잠실역점</h3>
+                        <span style={{ display: "flex" }}><h4 style={{ color: "yellow", marginRight: "5px" }}><FaStar /></h4> 4.2 (157)</span>
+                    </div>
+                </div>
+                <div style={{ display: "flex", alignItems: "center", marginTop: "20px", flexDirection: "column" }}>
+                    <img src="/item/Restraunt.png" style={{ width: "90%" }} />
+                    <div style={{ backgroundColor: "#151719", width: "100%", padding: "10px", color: "white", borderRadius: "0.5em", display: "flex", flexDirection: "column" }}>
+                        <h3>해우리 잠실역점</h3>
+                        <span style={{ display: "flex" }}><h4 style={{ color: "yellow", marginRight: "5px" }}><FaStar /></h4> 4.2 (157)</span>
+                    </div>
+                </div>
             </div>
         </div>
     );

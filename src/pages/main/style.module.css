@@ -2,7 +2,6 @@
     display: flex;
     width: 100%;
     justify-content: center;
-    height: 100vh;
 }
 
 .main__init__>.main_container {
@@ -81,8 +80,126 @@
 
 
 .gr_container {
-    padding: "15px";
-    margin-top: "20px";
+    padding: 15px;
+    margin-top: 20px;
     display: flex;
-    flex-direction: column
+    flex-direction: column;
+
+}
+
+.gr_container>header {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    font-size: 0.9em;
+}
+
+.gr_container>.gr_boxes {
+    display: flex;
+    overflow-x: scroll;
+    white-space: nowrap;
+    margin-top: 20px;
+    -ms-overflow-style: none;
+    /* 인터넷 익스플로러 */
+    scrollbar-width: none;
+    /* 파이어폭스 */
+}
+
+.gr_container>.gr_boxes>.box {
+    min-width: 300px;
+    height: 300px;
+    margin-right: 10px;
+    background-color: #151719;
+    color: white;
+    box-sizing: border-box;
+    flex-shrink: 0;
+    border-radius: 1.5em;
+    position: relative;
+    overflow: hidden;
+
+}
+
+.gr_container>.gr_boxes>.box .background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-position: 20% 20%;
+    background-size: 160%;
+    opacity: 0.5;
+    z-index: 1;
+}
+
+.gr_container>.gr_boxes>.box .content {
+    position: relative;
+    z-index: 2;
+    padding: 15px;
+}
+
+.gr_container>.gr_boxes>.box .content_bottom {
+    position: relative;
+    z-index: 2;
+    padding: 15px;
+    background-color: #FFFFFF;
+    width: 50%;
+    margin-left: 10px;
+    margin-top: 20px;
+    color: black;
+    font-weight: 600;
+    text-align: center;
+    border-radius: 1.5em;
+}
+
+.gr_container>.gr_boxes>.box .content_bottom_1 {
+    position: relative;
+    z-index: 2;
+    padding: 5px;
+    background-color: rgba(255, 255, 255, 0.7);
+    width: 50px;
+    margin-left: 10px;
+    margin-top: 20px;
+    color: black;
+    font-weight: 600;
+    text-align: center;
+    border-radius: 1.5em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+
+.r_container {
+    padding: 15px;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.r_container>div>.div_unselect {
+    border: 1px solid #AAAAAA;
+    min-width: 130px;
+    text-align: center;
+    padding: 5px;
+    border-radius: 1.5em;
+    margin-left: 5px;
+    margin-right: 5px;
+    color: #AAAAAA;
+}
+
+.r_container>div>.div_select {
+    border: 1px solid black;
+    background-color: black;
+    min-width: 130px;
+    text-align: center;
+    padding: 5px;
+    border-radius: 1.5em;
+    margin-left: 5px;
+    margin-right: 5px;
+    color: white;
+    -ms-overflow-style: none;
+    /* 인터넷 익스플로러 */
+    scrollbar-width: none;
+    /* 파이어폭스 */
 }
