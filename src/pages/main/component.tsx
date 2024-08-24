@@ -25,7 +25,7 @@ export const SearchBar = () => {
                 <input type="text" className={style.inner_left_searchbar} />
             </div>
             <div className={style.outer_center_searchbar}></div>
-            <CiLocationOn className={style.inner_right_image} />
+            <p style={{ marginRight: "10px" }}><CiLocationOn /></p>
             <div className={style.outer_right_searchbar}>
                 <div className={style.inner_right_searchbar}>Tower 730</div>
             </div>
