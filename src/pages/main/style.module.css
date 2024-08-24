@@ -78,3 +78,11 @@
     font-size: 0.9em;
     margin-top: 5px
 }
+
+
+.gr_container {
+    padding: "15px";
+    margin-top: "20px";
+    display: flex;
+    flex-direction: column
+}

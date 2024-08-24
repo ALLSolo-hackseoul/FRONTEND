@@ -108,3 +108,35 @@ export const NavFoodBar = () => {
         </div>
     );
 };
+
+
+export const GourmentRecommended = () => {
+    const data = [
+        {
+            name: "Hot Crispy Burger",
+            price: "6.11",
+            star: "4.2",
+            star_count: "157"
+        },
+        {
+            name: "Hot Crispy Burger",
+            price: "6.11",
+            star: "4.2",
+            star_count: "157"
+        }
+    ];
+
+    return (
+        <div style={{ padding: "15px", marginTop: "20px", display: "flex", flexDirection: "column" }}>
+            <header style={{ display: "flex", alignItems: "center", width: "100%", fontSize: "0.9em" }}>
+                <h3 style={{ marginRight: "auto" }}>Gourment Recommended</h3>
+                <span style={{ color: "#AAAAAA" }}>더보기</span>
+            </header>
+            <div style={{ display: "flex", overflowX: "scroll", width: "100%", whiteSpace: "nowrap" }}>
+                {Array(8).fill(null).map((_, index) => (
+                    <div key={index} style={{ backgroundColor: "#151719", width: "150px", height: "150px", display: "inline-block", marginRight: "10px" }} />
+                ))}
+            </div>
+        </div>
+    );
+};

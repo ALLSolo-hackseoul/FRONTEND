@@ -1,4 +1,4 @@
-import { MainHeader, NavFoodBar, SearchBar } from "./component";
+import { MainHeader, NavFoodBar, SearchBar, GourmentRecommended } from "./component";
 import style from "./style.module.css"
 
 
@@ -10,6 +10,7 @@ const MainPage = () => {
                 <MainHeader />
                 <SearchBar />
                 <NavFoodBar />
+                <GourmentRecommended />
             </div>
 
         </div>
