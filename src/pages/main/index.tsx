@@ -1,5 +1,6 @@
-import { MainHeader, SearchBar } from "./component";
+import { MainHeader, NavFoodBar, SearchBar } from "./component";
 import style from "./style.module.css"
+
 
 const MainPage = () => {
 
@@ -8,6 +9,7 @@ const MainPage = () => {
             <div className={style.main_container}>
                 <MainHeader />
                 <SearchBar />
+                <NavFoodBar />
             </div>
 
         </div>
