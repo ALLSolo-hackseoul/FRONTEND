@@ -1,5 +1,6 @@
+import styles from "./style.module.css";
+import { CiLocationOn } from "react-icons/ci";
 import { LuBadgePercent, LuShoppingCart } from "react-icons/lu";
-import style from "./style.module.css"
 import { useNavigate, useSearchParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 
@@ -18,8 +19,16 @@ export const MainHeader = () => {
 
 export const SearchBar = () => {
     return (
-        <div>
-
+        <div className={styles.searchbar}>
+            <div className={styles.outer_left_searchbar}>
+                <img src="/Search.svg" className={styles.inner_searchbar_image} />
+                <input type="text" className={styles.inner_left_searchbar}/>
+            </div>
+            <div className={styles.outer_center_searchbar}></div>
+            <CiLocationOn className={styles.inner_right_image}/>
+            <div className={styles.outer_right_searchbar}>
+                <div className={styles.inner_right_searchbar}>Tower 730</div>
+            </div>
         </div>
     )
 }
