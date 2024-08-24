@@ -98,7 +98,7 @@ export const Ranking = () => {
                 <h3 style={{ marginRight: "auto" }}>Popular Keywords</h3>
                 <p style={{ fontSize: "0.9em" }}>Updated at 21:27</p>
             </header>
-            <body style={{ marginTop: "20px" }}>
+            <div style={{ marginTop: "20px" }}>
                 {
                     Data.map((item, i) => {
                         return (
@@ -108,7 +108,7 @@ export const Ranking = () => {
                         )
                     })
                 }
-            </body>
+            </div>
         </div>
     )
 }

@@ -1,41 +1,43 @@
 import style from "./style.module.css";
-import { CiLocationOn } from "react-icons/ci";
-import { LuSearch, LuBadgePercent, LuShoppingCart, LuSlidersHorizontal } from "react-icons/lu";
+import { Logo } from "../../components";
+import { LuSearch, LuBadgePercent, LuShoppingCart, LuMapPin, LuSlidersHorizontal } from "react-icons/lu";
 import { useNavigate, useSearchParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { FaStar } from "react-icons/fa6";
 import { BiMessageSquareDots } from "react-icons/bi";
 
-export const MainHeader = () => {
+export const TitleBar = () => {
     return (
-        <header className={style.main_header}>
-            <img src="/Logo.svg" />
-            <div style={{ display: "flex" }}>
-                <h2 style={{ display: "flex", alignItems: "center", justifyContent: "center", marginRight: "15px" }}><LuBadgePercent /></h2>
-                <h2 style={{ display: "flex", alignItems: "center", justifyContent: "center" }}><LuShoppingCart /></h2>
-            </div>
+        <div className={style.title_bar}>
+            <MainHeader />
+            <SearchBar link="/search" />
+        </div>
+    )
+}
 
+const MainHeader = () => {
+    return (
+        <header className={`${style.main_header} ${style.padding_lr}`}>
+            <div>
+                <Logo className={style.margin_r_10} height={24} width={undefined} />
+                <span className={style.location}><LuMapPin />우리 집</span>
+            </div>
+            <div>
+                <h2 className={style.margin_r_20}><LuBadgePercent /></h2>
+                <h2><LuShoppingCart /></h2>
+            </div>
         </header>
     )
 }
 
-export const SearchBar = () => {
+const SearchBar = ({ link }: { link: string }) => {
     return (
-        <div style={{ padding: "10px" }}>
-            <div style={{ display: "flex" }}>
-                <div style={{ display: "flex", flexWrap: "nowrap", flex: 1 }}>
-                    <div style={{ borderRadius: "1.5em", border: "1px solid #AAAAAA", display: "flex", padding: "5px", flex: 1 }}>
-                        <h3 style={{ display: "flex", alignItems: "center", justifyContent: "center", marginRight: "10px" }}><LuSearch /></h3>
-                        <input style={{ all: "unset" }} placeholder="How about 마라탕" />
-                    </div>
-                    <div style={{ marginLeft: "10px", backgroundColor: "#FF7A00", width: "36px", height: "36px", display: "flex", alignItems: "center", justifyContent: "center", borderRadius: "100%", padding: "5px" }}><h3 style={{ display: "flex", alignItems: "center", justifyContent: "center", color: "white" }}><LuSlidersHorizontal /></h3></div>
-                </div>
+        <div onClick={() => { document.location = link }} className={`${style.flex_10} ${style.margin_t_20} ${style.padding_lr}`}>
+            <div className={style.search_bar}>
+                <LuSearch /><span>How about 마라탕</span>
             </div>
-            <span style={{ userSelect: "none", cursor: "pointer", color: "rgb(135, 135, 135)", fontWeight: "600", marginTop: "5px", display: "flex", alignItems: "center", marginLeft: "10px" }}><CiLocationOn style={{ marginRight: "10px" }} />Tower 730</span>
+            <div className={style.filter_btn}><LuSlidersHorizontal /></div>
         </div>
-
-
-
     )
 }
 
@@ -184,7 +186,7 @@ export const Restaurants = () => {
             <header>
                 <h2 style={{ marginRight: "auto" }}>Restaurants</h2>
             </header>
-            <div style={{ display: "flex", overflowX: "scroll", marginTop: "10px" }}>
+            <div className={style.noScrollBar} style={{ display: "flex", overflowX: "scroll", marginTop: "10px" }}>
                 {
                     data.map((item, i) => {
                         return (
@@ -193,22 +195,22 @@ export const Restaurants = () => {
                     })
                 }
             </div>
-            <div style={{ display: "flex", flexDirection: "column", }}>
-                <div style={{ display: "flex", alignItems: "center", marginTop: "20px", flexDirection: "column" }}>
-                    <img src="/item/Restraunt.png" style={{ width: "90%" }} />
-                    <div style={{ backgroundColor: "#151719", width: "100%", padding: "10px", color: "white", borderRadius: "0.5em", display: "flex", flexDirection: "column" }}>
-                        <h3>해우리 잠실역점</h3>
-                        <span style={{ display: "flex" }}><h4 style={{ color: "yellow", marginRight: "5px" }}><FaStar /></h4> 4.2 (157)</span>
+            <div style={{ display: "flex", flexDirection: "column", alignItems: "center", width: "100%" }}>
+                <div style={{ display: "flex", alignItems: "center", flexDirection: "column", width: "100%", paddingLeft: "20px", paddingRight: "20px" }}>
+                    <img src="/item/Restraunt.png" style={{ width: "100%", paddingLeft: "20px", paddingRight: "20px", top: "15px", position: "relative" }} />
+                    <div style={{ opacity: "0.9", backgroundColor: "#151719", width: "100%", padding: "10px", color: "white", borderRadius: "0.5em", display: "flex", flexDirection: "column", bottom: "15px", position: "relative" }}>
+                        <h3 style={{ opacity: "1", }}>해우리 잠실역점</h3>
+                        <span style={{ opacity: "1", display: "flex" }}><h4 style={{ color: "yellow", marginRight: "5px" }}><FaStar /></h4> 4.2 (157)</span>
                     </div>
                 </div>
-                <div style={{ display: "flex", alignItems: "center", marginTop: "20px", flexDirection: "column" }}>
-                    <img src="/item/Restraunt.png" style={{ width: "90%" }} />
-                    <div style={{ backgroundColor: "#151719", width: "100%", padding: "10px", color: "white", borderRadius: "0.5em", display: "flex", flexDirection: "column" }}>
-                        <h3>해우리 잠실역점</h3>
-                        <span style={{ display: "flex" }}><h4 style={{ color: "yellow", marginRight: "5px" }}><FaStar /></h4> 4.2 (157)</span>
+                <div style={{ display: "flex", alignItems: "center", marginTop: "20px", flexDirection: "column", width: "100%", paddingLeft: "20px", paddingRight: "20px" }}>
+                    <img src="/item/Restraunt.png" style={{ width: "100%", paddingLeft: "20px", paddingRight: "20px" }} />
+                    <div style={{ opacity: "0.9", backgroundColor: "#151719", width: "100%", padding: "10px", color: "white", borderRadius: "0.5em", display: "flex", flexDirection: "column", bottom: "30px", position: "relative" }}>
+                        <h3 style={{ opacity: "1", }}>해우리 잠실역점</h3>
+                        <span style={{ opacity: "1", display: "flex" }}><h4 style={{ color: "yellow", marginRight: "5px" }}><FaStar /></h4> 4.2 (157)</span>
                     </div>
                 </div>
             </div>
-        </div>
+        </div >
     );
 };
