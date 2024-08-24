@@ -1,0 +1,35 @@
+.main__init__ {
+    display: flex;
+    width: 100%;
+    min-height: 100vh;
+    justify-content: center;
+}
+
+.main__init__>.main_container {
+    max-width: 424px;
+    width: 100%;
+    background-color: white;
+}
+
+
+.main__init__>.main_container>header {
+    margin: 20px;
+    margin-left: 19px;
+}
+
+
+
+.header_ {
+    display: flex;
+    justify-content: space-between;
+}
+
+.color {
+    color: #3DACDC;
+    margin-right: 10px;
+}
+
+.no_color {
+    color: black;
+    margin-right: 10px;
+}
