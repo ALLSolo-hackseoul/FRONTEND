@@ -253,7 +253,7 @@
 
 
 .r_container {
-    padding: 15px;
+    padding-left: 20px;
     margin-top: 20px;
     display: flex;
     flex-direction: column;

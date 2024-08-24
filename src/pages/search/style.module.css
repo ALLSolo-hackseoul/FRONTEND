@@ -1,27 +1,8 @@
-.main__init__ {
-    display: flex;
-    width: 100%;
-    min-height: 100vh;
-    justify-content: center;
-}
-
-.main__init__>.main_container {
-    max-width: 424px;
-    width: 100%;
-    background-color: white;
-}
-
-
-.main__init__>.main_container>header {
-    margin: 20px;
-    margin-left: 19px;
-}
-
-
-
 .header_ {
     display: flex;
     justify-content: space-between;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
 .color {

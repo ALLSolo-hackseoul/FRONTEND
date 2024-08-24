@@ -10,7 +10,7 @@ export const TitleBar = () => {
     return (
         <div className={style.title_bar}>
             <MainHeader />
-            <SearchBar />
+            <SearchBar link="/search" />
         </div>
     )
 }
@@ -30,9 +30,9 @@ const MainHeader = () => {
     )
 }
 
-const SearchBar = () => {
+const SearchBar = ({ link }: { link: string }) => {
     return (
-        <div className={`${style.flex_10} ${style.margin_t_20} ${style.padding_lr}`}>
+        <div onClick={() => { document.location = link }} className={`${style.flex_10} ${style.margin_t_20} ${style.padding_lr}`}>
             <div className={style.search_bar}>
                 <LuSearch /><span>How about 마라탕</span>
             </div>
