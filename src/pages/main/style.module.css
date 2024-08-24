@@ -174,6 +174,7 @@
     align-items: center;
     width: 100%;
     font-size: 0.9em;
+    padding-right: 20px;
 }
 
 .gr_container>.gr_boxes {

@@ -195,22 +195,22 @@ export const Restaurants = () => {
                     })
                 }
             </div>
-            <div style={{ display: "flex", flexDirection: "column", }}>
-                <div style={{ display: "flex", alignItems: "center", marginTop: "20px", flexDirection: "column" }}>
-                    <img src="/item/Restraunt.png" style={{ width: "90%" }} />
-                    <div style={{ backgroundColor: "#151719", width: "100%", padding: "10px", color: "white", borderRadius: "0.5em", display: "flex", flexDirection: "column" }}>
-                        <h3>해우리 잠실역점</h3>
-                        <span style={{ display: "flex" }}><h4 style={{ color: "yellow", marginRight: "5px" }}><FaStar /></h4> 4.2 (157)</span>
+            <div style={{ display: "flex", flexDirection: "column", alignItems: "center", width: "100%" }}>
+                <div style={{ display: "flex", alignItems: "center", flexDirection: "column", width: "100%", paddingLeft: "20px", paddingRight: "20px" }}>
+                    <img src="/item/Restraunt.png" style={{ width: "100%", paddingLeft: "20px", paddingRight: "20px", top: "15px", position: "relative" }} />
+                    <div style={{ opacity: "0.9", backgroundColor: "#151719", width: "100%", padding: "10px", color: "white", borderRadius: "0.5em", display: "flex", flexDirection: "column", bottom: "15px", position: "relative" }}>
+                        <h3 style={{ opacity: "1", }}>해우리 잠실역점</h3>
+                        <span style={{ opacity: "1", display: "flex" }}><h4 style={{ color: "yellow", marginRight: "5px" }}><FaStar /></h4> 4.2 (157)</span>
                     </div>
                 </div>
-                <div style={{ display: "flex", alignItems: "center", marginTop: "20px", flexDirection: "column" }}>
-                    <img src="/item/Restraunt.png" style={{ width: "90%" }} />
-                    <div style={{ backgroundColor: "#151719", width: "100%", padding: "10px", color: "white", borderRadius: "0.5em", display: "flex", flexDirection: "column" }}>
-                        <h3>해우리 잠실역점</h3>
-                        <span style={{ display: "flex" }}><h4 style={{ color: "yellow", marginRight: "5px" }}><FaStar /></h4> 4.2 (157)</span>
+                <div style={{ display: "flex", alignItems: "center", marginTop: "20px", flexDirection: "column", width: "100%", paddingLeft: "20px", paddingRight: "20px" }}>
+                    <img src="/item/Restraunt.png" style={{ width: "100%", paddingLeft: "20px", paddingRight: "20px" }} />
+                    <div style={{ opacity: "0.9", backgroundColor: "#151719", width: "100%", padding: "10px", color: "white", borderRadius: "0.5em", display: "flex", flexDirection: "column", bottom: "30px", position: "relative" }}>
+                        <h3 style={{ opacity: "1", }}>해우리 잠실역점</h3>
+                        <span style={{ opacity: "1", display: "flex" }}><h4 style={{ color: "yellow", marginRight: "5px" }}><FaStar /></h4> 4.2 (157)</span>
                     </div>
                 </div>
             </div>
-        </div>
+        </div >
     );
 };
