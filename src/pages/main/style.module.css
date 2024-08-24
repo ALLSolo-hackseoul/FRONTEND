@@ -22,7 +22,7 @@
     border: 1px #c1c1c1 solid;
     border-radius: 29px;
     display: block;
-    width: 304px;   
+    width: 304px;
     display: flex;
     height: 36px;
     left: 20px;
@@ -37,7 +37,7 @@
 .searchbar>.outer_left_searchbar {
     display: flex;
     float: left;
-    flex-direction:  row;
+    flex-direction: row;
     align-items: center;
 }
 
@@ -49,7 +49,7 @@
     overflow: hidden;
 }
 
-.searchbar>.outer_center_searchbar{
+.searchbar>.outer_center_searchbar {
     width: 0.5px;
     height: 20px;
     display: flex;
@@ -73,9 +73,11 @@
     0% {
         transform: translateX(100%);
     }
+
     100% {
         transform: translateX(-100%);
     }
+}
 
 .main_header {
     display: flex;
