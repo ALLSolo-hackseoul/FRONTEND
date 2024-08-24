@@ -1,6 +1,6 @@
 import style from "./style.module.css";
 import { CiLocationOn } from "react-icons/ci";
-import { LuBadgePercent, LuShoppingCart } from "react-icons/lu";
+import { LuSearch, LuBadgePercent, LuShoppingCart, LuSlidersHorizontal } from "react-icons/lu";
 import { useNavigate, useSearchParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 
@@ -19,17 +19,21 @@ export const MainHeader = () => {
 
 export const SearchBar = () => {
     return (
-        <div className={style.searchbar}>
-            <div className={style.outer_left_searchbar}>
-                <img src="/Search.svg" className={style.inner_searchbar_image} />
-                <input type="text" className={style.inner_left_searchbar} />
+        <div style={{ padding: "10px" }}>
+            <div style={{ display: "flex" }}>
+                <div style={{ display: "flex", flexWrap: "nowrap", flex: 1 }}>
+                    <div style={{ borderRadius: "1.5em", border: "1px solid #AAAAAA", display: "flex", padding: "5px", flex: 1 }}>
+                        <h3 style={{ display: "flex", alignItems: "center", justifyContent: "center", marginRight: "10px" }}><LuSearch /></h3>
+                        <input style={{ all: "unset" }} placeholder="How about 마라탕" />
+                    </div>
+                    <div style={{ marginLeft: "10px", backgroundColor: "#FF7A00", width: "36px", height: "36px", display: "flex", alignItems: "center", justifyContent: "center", borderRadius: "100%", padding: "5px" }}><h3 style={{ display: "flex", alignItems: "center", justifyContent: "center", color: "white" }}><LuSlidersHorizontal /></h3></div>
+                </div>
             </div>
-            <div className={style.outer_center_searchbar}></div>
-            <p style={{ marginRight: "10px" }}><CiLocationOn /></p>
-            <div className={style.outer_right_searchbar}>
-                <div className={style.inner_right_searchbar}>Tower 730</div>
-            </div>
+            <span style={{ userSelect: "none", cursor: "pointer", color: "rgb(135, 135, 135)", fontWeight: "600", marginTop: "5px", display: "flex", alignItems: "center", marginLeft: "10px" }}><CiLocationOn style={{ marginRight: "10px" }} />Tower 730</span>
         </div>
+
+
+
     )
 }
 
@@ -59,28 +63,28 @@ export const NavFoodBar = () => {
             name: "All"
         },
         {
-            url: "/icon_list/all.svg",
+            url: "/icon_list/korean.svg",
             name: "Korean"
         },
         {
-            url: "/icon_list/all.svg",
+            url: "/icon_list/grilled.svg",
             name: "Grilled"
         },
         {
-            url: "/icon_list/all.svg",
+            url: "/icon_list/seafood.svg",
             name: "SeaFood"
         },
         {
-            url: "/icon_list/all.svg",
-            name: "Chinese"
+            url: "/icon_list/japanese.svg",
+            name: "Japanese"
         },
         {
-            url: "/icon_list/all.svg",
-            name: "idk:("
+            url: "/icon_list/fastfood.svg",
+            name: "Fast food"
         },
         {
-            url: "/icon_list/all.svg",
-            name: "idk:("
+            url: "/icon_list/drink.svg",
+            name: "Drink"
         }
     ];
 

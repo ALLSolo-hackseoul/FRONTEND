@@ -18,75 +18,7 @@
 }
 
 
-.searchbar {
-    border: 1px #c1c1c1 solid;
-    border-radius: 29px;
-    display: block;
-    margin-left: 30px;
-    margin-right: 30px;
-    display: flex;
-    height: 36px;
-    left: 20px;
-    align-items: center;
-}
 
-.searchbar>.outer_left_searchbar>.inner_searchbar_image {
-    margin-left: 10px;
-}
-
-.searchbar>.outer_left_searchbar {
-    display: flex;
-    float: left;
-    flex-direction: row;
-    align-items: center;
-    width: 66%;
-}
-
-.searchbar>.outer_right_searchbar {
-    display: flex;
-    flex-direction: row;
-    float: right;
-    align-items: center;
-    overflow: hidden;
-    margin-right: 10px;
-}
-
-.searchbar>.outer_center_searchbar {
-    width: 0.5px;
-    height: 20px;
-    display: flex;
-    border-right: 1px black solid;
-    margin-right: 10px;
-}
-
-.searchbar>.outer_left_searchbar>.inner_left_searchbar {
-    display: flex;
-    outline: none;
-    border: none;
-}
-
-.searchbar>.outer_right_searchbar>.inner_right_searchbar {
-    flex-wrap: nowrap;
-    white-space: nowrap;
-    animation: inner_right_searchbar 5s linear infinite;
-    padding-right: 10px;
-    width: 100vw;
-    display: flex;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-}
-
-@keyframes inner_right_searchbar {
-    0% {
-        transform: translateX(150%);
-    }
-
-    100% {
-        transform: translateX(-100%);
-    }
-}
 
 .main_header {
     display: flex;
@@ -96,13 +28,13 @@
 
 .navfoodbar {
     display: flex;
-    padding: 10px;
     overflow-x: scroll;
     -ms-overflow-style: none;
     /* 인터넷 익스플로러 */
     scrollbar-width: none;
     /* 파이어폭스 */
     user-select: none;
+    margin-top: 5px;
 }
 
 .navfoodbar::-webkit-scrollbar {
@@ -128,12 +60,12 @@
     border-radius: 100%;
     display: flex;
     padding: 10px;
-    background-color: #151719;
+    background-color: rgba(255, 123, 0, 0.7);
 }
 
 .navfoodbar>div>.profile_select_p {
     text-align: center;
-    color: #151719;
+    color: rgba(255, 123, 0, 0.7);
     font-weight: 10;
     font-size: 0.9em;
     margin-top: 5px
