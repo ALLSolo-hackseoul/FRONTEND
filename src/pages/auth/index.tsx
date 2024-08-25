@@ -10,13 +10,15 @@ const AuthPage = () => {
     return (
         <div className={style.auth_page}>
             <title><h1>{stage == 0 ? "Passport" : "Face"}</h1><h3>{stage == 0 ? "Passport" : "Face"}</h3></title>
-            <CameraFrame top={200} />
+            <CameraFrame gap={stage == 0 ? 150 : 250} top={200} />
             {comple ?
                 <div className={style.comple}>
                     <img src="/Check.svg" />
                 </div>
                 : undefined}
-            <Webcam className={style.cam} />
+            <Webcam className={style.cam} videoConstraints={{
+                facingMode: stage == 0 ? "environment" : "user"
+            }} />
             <div className={style.progress}><p>Recognized</p></div>
         </div>
     )
